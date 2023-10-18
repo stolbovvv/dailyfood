@@ -1,0 +1,103 @@
+@import "fonts";
+
+@mixin HLight($size, $height) {
+  font-family: 'HelveticaNeueCyr';
+  font-size: $size;
+  line-height: $height;
+  font-weight: 300;
+}
+
+@mixin HRoman($size, $height) {
+  font-family: 'HelveticaNeueCyr';
+  font-size: $size;
+  line-height: $height;
+  font-weight: normal;
+}
+
+@mixin HMedium($size, $height) {
+  font-family: 'HelveticaNeueCyr';
+  font-size: $size;
+  line-height: $height;
+  font-weight: 500;
+}
+@mixin HBold($size, $height) {
+  font-family: 'HelveticaNeueCyr';
+  font-size: $size;
+  line-height: $height;
+  font-weight: bold;
+}
+@mixin HBlack($size, $height) {
+  font-family: 'HelveticaNeueCyr';
+  font-size: $size;
+  line-height: $height;
+  font-weight: 900;
+}
+
+
+$text-color: #3d3d3d;
+$text-color--first: #333;
+
+
+
+$phone-width: 320px;
+$phoneBig-width: 480px;
+$tablet-width: 768px;
+$container-width: 1170px;
+$laptop-width: 1366px;
+$desktop-width: 1600px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phoneSmall {
+  @media (min-width: #{$phone-width}) and (max-width: #{$phoneBig-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phoneBig {
+  @media (min-width: #{$phoneBig-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$container-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin container {
+  @media (min-width: #{$container-width}) and (max-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin responsive($direction, $width) {
+  @if $direction == max {
+    @media (max-width: #{$width}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$width}) {
+      @content;
+    }
+  }
+}
+
+
