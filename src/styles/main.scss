@@ -1,0 +1,335 @@
+@import "variables";
+@import "general";
+
+.ration {
+  padding-bottom: 90px;
+  background: url("../images/ration-bg-1920.jpg") top left no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  &__header {
+    margin-bottom: 75px;
+  }
+  &__navigation {
+    margin-bottom: 50px;
+
+    @include responsive(max, 900px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 180px;
+    height: 205px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(182, 182, 182, 0.3);
+    cursor: pointer;
+
+    svg {
+      fill: #51b45b;
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 13.5px 1.5px rgba(81, 180, 91, 0.3), 0px 0px 5px 0px rgba(182, 182, 182, 0.3);
+      transform: translateY(-5px);
+    }
+    &--active {
+      background-color: #51b45b;
+
+      .ration__img-wrapper {
+        border: 2px solid white;
+      }
+      .ration__name {
+        color: white;
+      }
+      .ration__kcal {
+        color: white;
+      }
+      svg {
+        fill: white;
+      }
+    }
+
+    @include responsive(max, $container-width) {
+      width: 140px;
+      height: 165px;
+      padding-top: 10px;
+      padding-bottom: 15px;
+    }
+    @include responsive(max, 900px) {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  &__img-wrapper {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto;
+    //margin: auto;
+    //margin-bottom: 25px;
+    padding: 15px;
+    border: 2px solid #51b45b;
+    border-radius: 50%;
+  }
+  &__icon {
+  }
+  &__name {
+    text-align: center;
+    color: #51b45b;
+    @include HBold(16px, 18px);
+  }
+  &__kcal {
+    text-align: center;
+    @include HRoman(14px, 16px);
+  }
+
+  &__content {
+  }
+  &__block {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+  &__description {
+    margin-bottom: 48px;
+    @include HRoman(15px, 17px);
+  }
+  &__days {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__wrap {
+    width: fit-content;
+  }
+  &__day {
+    display: inline-block;
+    vertical-align: middle;
+    width: 130px;
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 12.5px;
+    text-align: center;
+    @include HRoman(14px, 25px);
+    cursor: pointer;
+
+    @include responsive(max, 980px) {
+      width: auto;
+      padding: 0 20px;
+    }
+
+    &--active {
+      background-color: #51b45b;
+      color: white;
+    }
+  }
+  &__info {
+    display: none;
+    justify-content: space-between;
+
+    &--active {
+      display: flex;
+    }
+
+    @include responsive(max, 600px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: transparent;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    @include responsive(max, $container-width) {
+      justify-content: space-around;
+    }
+  }
+  &__menu-item {
+    position: relative;
+    width: 270px;
+    height: 170px;
+    background-color: gold;
+    color: white;
+    box-shadow: 0px 0px 5px 0px rgba(182, 182, 182, 0.3);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-right: 2.3%;
+
+    //&:hover {
+    //  .ration__dish-info {
+    //    background-color: hsla(0, 2%, 9%, .8);
+    //  }
+    //  .ration__dish-description {
+    //    opacity: 1;
+    //  }
+    //  .ration__dish-details {
+    //    height: 15px;
+    //  }
+    //}
+  }
+  &__menu-result {
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 270px;
+    height: 170px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(182, 182, 182, 0.3);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    @include HRoman(15px, 17px);
+    margin-right: 2.3%;
+  }
+  &__dish-name {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 15px;
+    height: 30px;
+    background-color: rgba(57, 57, 57, 0.702);
+    color: white;
+    @include HRoman(15px, 30px);
+  }
+  &__dish-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 2%, 9%, 0);
+    transition: background-color 0.3s ease;
+
+    @include responsive(max, 768px) {
+      background-color: hsla(0, 2%, 9%, 0.8);
+    }
+  }
+  &__dish-description {
+    padding: 0 1em;
+    @include HRoman(15px, 17px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    @include responsive(max, 768px) {
+      opacity: 1;
+    }
+  }
+  &__dish-summary {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+    @include HRoman(15px, 17px);
+  }
+  &__dish-details {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    @include HRoman(14px, 16px);
+    font-weight: lighter;
+
+    @include responsive(max, 768px) {
+      height: 15px;
+    }
+  }
+
+  &__cost {
+    width: 270px;
+    //margin-left: 18px;
+    flex-shrink: 0;
+    margin-bottom: 44px;
+
+    @include responsive(max, 600px) {
+      margin: 0 auto;
+      margin-bottom: 44px;
+    }
+  }
+  &__period {
+    height: 35px;
+    font-size: 0;
+  }
+  &__period-item {
+    display: inline-block;
+    width: 90px;
+    background-color: transparent;
+    @include HBold(16px, 35px);
+    text-align: center;
+    cursor: pointer;
+
+    &--active {
+      color: #51b45b;
+      background-color: white;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+  }
+  &__value-item {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 15px;
+    background-color: white;
+    text-align: center;
+    @include HRoman(15px, 24px);
+
+    &--active {
+      display: flex;
+    }
+
+    span {
+      @include HBlack(23px, 34px);
+
+      &:last-of-type {
+        color: #51b45b;
+      }
+    }
+  }
+  &__button {
+    margin: 30px auto;
+    width: 200px;
+    height: 45px;
+    min-width: 200px;
+  }
+  &__delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    border-top: 1px solid #dfdfdf;
+    padding-left: 28px;
+    padding-right: 35px;
+  }
+  &__delivery-icon {
+    width: 36px;
+    //height: 24px;
+    margin-right: 26px;
+  }
+  &__delivery-text {
+    display: inline-block;
+    vertical-align: middle;
+    @include HRoman(14px, 15px);
+    text-align: left;
+  }
+
+  .general__form {
+    background-color: white;
+    background-image: url(../images/ration-form-bg.png);
+
+    @include responsive(max, $container-width) {
+      -webkit-background-size: 30%;
+      background-size: 30%;
+    }
+    @include responsive(max, 600px) {
+      background: white;
+    }
+  }
+}

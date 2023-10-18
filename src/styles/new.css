@@ -1,0 +1,313 @@
+.ration-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: stretch;
+  margin: 40px 20px 40px 0;
+  width: 260px;
+}
+.ration-card__img {
+  width: 200px;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: -90px;
+  z-index: 1;
+}
+.ration-card__body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 110px 20px 20px 20px;
+  border-radius: 7px;
+  background: #fff;
+}
+.ration-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ration-card__name {
+  color: #52b45b;
+  font-size: 16px;
+  font-weight: 700;
+}
+.ration-card__kcal {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+.ration-card__descr {
+  margin-top: 10px;
+  margin-bottom: auto;
+}
+.ration-card__props {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.ration-card__props-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.ration-card__props-item:not(:first-child) {
+  margin-left: 19px;
+}
+.ration-card__props-item:not(:last-child) {
+  padding-right: 20px;
+  border-right: 1px dashed #dedede;
+}
+.ration-card__props-label {
+  color: #b8b8b8;
+  font-size: 14px;
+}
+.ration-card__props-value {
+  margin-top: 4px;
+  color: #000;
+  font-size: 14px;
+}
+.ration-card__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 999px;
+  background: #52b45b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease 0s;
+}
+.ration-card__button:hover {
+  background: #3d9044;
+}
+.ration-card__button-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+.ration-card__button-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s ease 0s;
+}
+:hover > .ration-card__button-icon {
+  transform: rotate(45deg);
+}
+
+.ration__form {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 60px;
+}
+.ration__form-img {
+  align-self: stretch;
+  width: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+.ration__form-body {
+  flex: 1 1 auto;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+.ration__form-cell {
+  display: flex;
+  flex-direction: column;
+}
+.ration__form-cell:nth-child(2) {
+  margin: 0 auto;
+  max-width: 300px;
+}
+.ration__form-lable {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+.ration__form-title {
+  margin-top: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+.ration__form-promo {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.ration__form-promo-label {
+  padding: 10px 20px 12px 20px;
+  border-radius: 999px;
+  background: #000;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+.ration__form-promo-value {
+  padding: 10px 15px 12px 15px;
+  border-radius: 100px;
+  font-size: 24px;
+  font-weight: 700;
+  background: #ffd100;
+  margin-left: -15px;
+}
+.ration__form-input {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #b8b8b8;
+}
+.ration__form-input::-moz-placeholder {
+  color: #b8b8b8;
+}
+.ration__form-input::placeholder {
+  color: #b8b8b8;
+}
+.ration__form-input:focus {
+  border-bottom: 1px solid #52b45b;
+}
+.ration__form-input + .ration__form-input {
+  margin-top: 20px;
+}
+.ration__form-policy {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.ration__form-label {
+  flex: 1 1 auto;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #b8b8b8;
+  margin-left: 10px;
+}
+.ration__form-label > a {
+  color: #52b45b;
+  display: inline;
+  text-decoration: underline;
+}
+.ration__form-button {
+  margin-top: 30px;
+}
+
+.ration-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+.ration-popup:not(.is-active) {
+  opacity: 0;
+  visibility: hidden;
+}
+.ration-popup__overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(133, 133, 133, 0.6);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+}
+.ration-popup__dialog {
+  position: relative;
+  max-width: 1002px;
+  padding: 60px;
+  border-radius: 20px;
+  background: #fff;
+}
+.ration-popup__button-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+.ration-popup__button-close:hover {
+  background: hsl(0, 0%, 95%);
+}
+.ration-popup__button-close > svg {
+  width: 20px;
+  height: 20px;
+}
+.ration-popup__body {
+  display: flex;
+  justify-content: space-between;
+}
+.ration-popup__img {
+  flex: 0 0 auto;
+  width: calc(50% - 20px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.ration-popup__info {
+  flex: 0 0 auto;
+  width: calc(50% - 20px);
+}
+.ration-popup__name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #52b45b;
+}
+.ration-popup__descr {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #000;
+  line-height: 1.2;
+}
+.ration-popup__compound {
+  margin-top: 40px;
+}
+.ration-popup__compound-title {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.ration-popup__compound-text {
+  margin-top: 10px;
+  color: #b8b8b8;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.ration-popup__props {
+  display: flex;
+  margin-top: 40px;
+}
+.ration-popup__props-item {
+  display: flex;
+  flex-direction: column;
+}
+.ration-popup__props-item:not(:first-child) {
+  margin-left: 20px;
+}
+.ration-popup__props-item:not(:last-child) {
+  border-right: 1px dashed #dedede;
+  padding-right: 20px;
+}
+.ration-popup__props-label {
+  color: #b8b8b8;
+  font-size: 20px;
+  line-height: 1.1;
+}
+.ration-popup__props-value {
+  color: #000;
+  font-size: 20px;
+  line-height: 1.2;
+}/*# sourceMappingURL=new.css.map */
