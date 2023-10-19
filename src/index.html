@@ -21,6 +21,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
     <link rel="manifest" href="./site.webmanifest" />
 
+    <!-- Connecting Libs Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css" rel="stylesheet" />
+
     <!-- Connecting Page Styles -->
     <link rel="stylesheet" href="./styles/main.min.css" />
     <link rel="stylesheet" href="./styles/new.min.css" />
@@ -28,7 +31,6 @@
 
   <body>
     <section class="ration">
-      <h2 class="ration__header header-line">Выберите рацион, который подойдёт именно Вам</h2>
       <div class="container">
         <div class="ration__navigation flex">
           <div class="ration__tab office ration__tab--active">
@@ -507,218 +509,259 @@
               </div>
             </div>
             <div class="ration__info ration__info--active">
-              <div class="ration__menu ration__menu--active">
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/1.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">Завтрак</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Яблочный штрудель с мятой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/2.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">Обед</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Куриное филе в соусе терияки с гречкой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/3.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">2-й завтрак</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Яблочный штрудель с мятой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/1.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">Завтрак</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Яблочный штрудель с мятой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/2.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">Обед</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Куриное филе в соусе терияки с гречкой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-                <div class="ration-card">
-                  <img class="ration-card__img" src="./images/ration-cards/3.png" alt="food image" />
-                  <div class="ration-card__body">
-                    <div class="ration-card__head">
-                      <span class="ration-card__name">2-й завтрак</span>
-                      <span class="ration-card__kcal">332 ккал</span>
-                    </div>
-                    <p class="ration-card__descr">Яблочный штрудель с мятой</p>
-                    <ul class="ration-card__props">
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Белки</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Жиры</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                      <li class="ration-card__props-item">
-                        <span class="ration-card__props-label">Углеводы</span>
-                        <span class="ration-card__props-value">7 г</span>
-                      </li>
-                    </ul>
-                    <button class="ration-card__button">
-                      <span class="ration-card__button-text">Состав</span>
-                      <span class="ration-card__button-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                          <path
-                            d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
+              <div class="ration__slider splide">
+                <div class="splide__track ration__menu-track">
+                  <ul class="splide__list ration__menu-list">
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/1.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">Завтрак</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Яблочный штрудель с мятой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/2.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">Обед</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Куриное филе в соусе терияки с гречкой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/3.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">2-й завтрак</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Яблочный штрудель с мятой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/1.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">Завтрак</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Яблочный штрудель с мятой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/2.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">Обед</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Куриное филе в соусе терияки с гречкой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="splide__slide ration-card">
+                      <img class="ration-card__img" src="./images/ration-cards/3.png" alt="food image" />
+                      <div class="ration-card__body">
+                        <div class="ration-card__head">
+                          <span class="ration-card__name">2-й завтрак</span>
+                          <span class="ration-card__kcal">332 ккал</span>
+                        </div>
+                        <p class="ration-card__descr">Яблочный штрудель с мятой</p>
+                        <ul class="ration-card__props">
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Белки</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Жиры</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                          <li class="ration-card__props-item">
+                            <span class="ration-card__props-label">Углеводы</span>
+                            <span class="ration-card__props-value">7 г</span>
+                          </li>
+                        </ul>
+                        <button class="ration-card__button js-popup-trigger" data-show-popup="ration-popup">
+                          <span class="ration-card__button-text">Состав</span>
+                          <span class="ration-card__button-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                            >
+                              <path
+                                d="M17.9199 6.62C17.8185 6.37565 17.6243 6.18147 17.3799 6.08C17.2597 6.02876 17.1306 6.00158 16.9999 6H6.99994C6.73472 6 6.48037 6.10536 6.29283 6.29289C6.1053 6.48043 5.99994 6.73478 5.99994 7C5.99994 7.26522 6.1053 7.51957 6.29283 7.70711C6.48037 7.89464 6.73472 8 6.99994 8H14.5899L6.28994 16.29C6.19621 16.383 6.12182 16.4936 6.07105 16.6154C6.02028 16.7373 5.99414 16.868 5.99414 17C5.99414 17.132 6.02028 17.2627 6.07105 17.3846C6.12182 17.5064 6.19621 17.617 6.28994 17.71C6.3829 17.8037 6.4935 17.8781 6.61536 17.9289C6.73722 17.9797 6.86793 18.0058 6.99994 18.0058C7.13195 18.0058 7.26266 17.9797 7.38452 17.9289C7.50638 17.8781 7.61698 17.8037 7.70994 17.71L15.9999 9.41V17C15.9999 17.2652 16.1053 17.5196 16.2928 17.7071C16.4804 17.8946 16.7347 18 16.9999 18C17.2652 18 17.5195 17.8946 17.707 17.7071C17.8946 17.5196 17.9999 17.2652 17.9999 17V7C17.9984 6.86932 17.9712 6.74022 17.9199 6.62Z"
+                                fill="currentColor"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
+
               <div class="ration__cost">
                 <div class="ration__period">
                   <div class="ration__period-item ration__period-item--active">1 день</div>
@@ -779,88 +822,105 @@
                 </div>
               </div>
             </div>
+            <div class="ration__info"></div>
+            <div class="ration__info"></div>
+            <div class="ration__info"></div>
+            <div class="ration__info"></div>
+            <div class="ration__info"></div>
+            <div class="ration__info"></div>
           </div>
+          <div class="ration__block"></div>
+          <div class="ration__block"></div>
+          <div class="ration__block"></div>
+          <div class="ration__block"></div>
+          <div class="ration__block"></div>
         </div>
-        <div class="ration__form">
-          <img class="ration__form-img" src="./images/ration-form-decor.png" alt="" />
-          <div class="ration__form-body">
-            <div class="ration__form-cell">
-              <p class="ration__form-lable">Есть сомнения?</p>
-              <p class="ration__form-title">Попробуйте!</p>
-              <p class="ration__form-promo">
-                <span class="ration__form-promo-label">Пробный день за</span>
-                <span class="ration__form-promo-value">333 ₽</span>
+        <div class="ration-form">
+          <picture class="ration-form__img">
+            <source srcset="./images/ration-form-decor-mobile.png" media="(max-width: 610px)" />
+            <img src="./images/ration-form-decor.png" alt="" />
+          </picture>
+          <div class="ration-form__body">
+            <div class="ration-form__cell">
+              <p class="ration-form__lable">Есть сомнения?</p>
+              <p class="ration-form__title">Попробуйте!</p>
+              <p class="ration-form__promo">
+                <span class="ration-form__promo-label">Пробный день за</span>
+                <span class="ration-form__promo-value">333 ₽</span>
               </p>
             </div>
-            <div class="ration__form-cell">
-              <input class="ration__form-input" name="" type="text" placeholder="Имя" />
-              <input class="ration__form-input" name="" type="tel" placeholder="Телефон" />
-              <div class="ration__form-policy">
-                <input class="ration__form-check" name="" type="checkbox" />
-                <span class="ration__form-label">Я принимаю условия <a href="#">Политики конфиденциальности</a></span>
+            <div class="ration-form__cell">
+              <input class="ration-form__input" name="" type="text" placeholder="Имя" />
+              <input class="ration-form__input" name="" type="tel" placeholder="+7 (999) 123-45-67" />
+              <div class="ration-form__policy">
+                <input class="ration-form__check" name="" type="checkbox" />
+                <span class="ration-form__label">Я принимаю условия <a href="#">Политики конфиденциальности</a></span>
               </div>
-              <button class="ration__form-button button" type="submit">Попробовать</button>
+              <button class="ration-form__button button" type="submit">Попробовать</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="ration-popup">
-      <div class="ration-popup__overlay">
-        <div class="ration-popup__dialog">
-          <button class="ration-popup__button-close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M4.41595 4.41205C4.74139 4.08661 5.26903 4.08661 5.59446 4.41205L15.5944 14.412C15.9199 14.7375 15.9199 15.2651 15.5944 15.5905C15.269 15.916 14.7414 15.916 14.4159 15.5905L4.41595 5.59056C4.09052 5.26512 4.09052 4.73748 4.41595 4.41205Z"
-                fill="#D9D9D9"
-              />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M15.5945 4.41205C15.9199 4.73748 15.9199 5.26512 15.5945 5.59056L5.59446 15.5906C5.26903 15.916 4.74139 15.916 4.41595 15.5906C4.09052 15.2652 4.09052 14.7375 4.41595 14.4121L14.416 4.41205C14.7414 4.08661 15.2691 4.08661 15.5945 4.41205Z"
-                fill="#D9D9D9"
-              />
-            </svg>
-          </button>
-          <div class="ration-popup__body">
-            <img class="ration-popup__img" src="./images/ration-cards/1.png" alt="food image" />
-            <div class="ration-popup__info">
-              <h2 class="ration-popup__name">Завтрак</h2>
-              <p class="ration-popup__descr">Яблочный штрудель с мятой</p>
-              <div class="ration-popup__compound">
-                <h3 class="ration-popup__compound-title">Состав</h3>
-                <p class="ration-popup__compound-text">
-                  Куриное филе; Соус Терияки; Гречневая крупа; Томаты; Кунжут; Лук зеленый; Листья салата
-                </p>
-              </div>
-              <ul class="ration-popup__props">
-                <li class="ration-popup__props-item">
-                  <span class="ration-popup__props-label">Калории</span>
-                  <span class="ration-popup__props-value">332 ккал</span>
-                </li>
-                <li class="ration-popup__props-item">
-                  <span class="ration-popup__props-label">Белки</span>
-                  <span class="ration-popup__props-value">7 г</span>
-                </li>
-                <li class="ration-popup__props-item">
-                  <span class="ration-popup__props-label">Жиры</span>
-                  <span class="ration-popup__props-value">7 г</span>
-                </li>
-                <li class="ration-popup__props-item">
-                  <span class="ration-popup__props-label">Углеводы</span>
-                  <span class="ration-popup__props-value">7 г</span>
-                </li>
-              </ul>
+    <div class="ration-popup" id="ration-popup">
+      <div class="ration-popup__dialog">
+        <button class="ration-popup__button-close js-popup-trigger" data-hide-popup="ration-popup">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.41595 4.41205C4.74139 4.08661 5.26903 4.08661 5.59446 4.41205L15.5944 14.412C15.9199 14.7375 15.9199 15.2651 15.5944 15.5905C15.269 15.916 14.7414 15.916 14.4159 15.5905L4.41595 5.59056C4.09052 5.26512 4.09052 4.73748 4.41595 4.41205Z"
+              fill="#D9D9D9"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M15.5945 4.41205C15.9199 4.73748 15.9199 5.26512 15.5945 5.59056L5.59446 15.5906C5.26903 15.916 4.74139 15.916 4.41595 15.5906C4.09052 15.2652 4.09052 14.7375 4.41595 14.4121L14.416 4.41205C14.7414 4.08661 15.2691 4.08661 15.5945 4.41205Z"
+              fill="#D9D9D9"
+            />
+          </svg>
+        </button>
+        <div class="ration-popup__body">
+          <img class="ration-popup__img" src="./images/ration-cards/1.png" alt="food image" />
+          <div class="ration-popup__info">
+            <h2 class="ration-popup__name">Завтрак</h2>
+            <p class="ration-popup__descr">Яблочный штрудель с мятой</p>
+            <div class="ration-popup__compound">
+              <h3 class="ration-popup__compound-title">Состав</h3>
+              <p class="ration-popup__compound-text">
+                Куриное филе; Соус Терияки; Гречневая крупа; Томаты; Кунжут; Лук зеленый; Листья салата
+              </p>
             </div>
+            <ul class="ration-popup__props">
+              <li class="ration-popup__props-item">
+                <span class="ration-popup__props-label">Калории</span>
+                <span class="ration-popup__props-value">332 ккал</span>
+              </li>
+              <li class="ration-popup__props-item">
+                <span class="ration-popup__props-label">Белки</span>
+                <span class="ration-popup__props-value">7 г</span>
+              </li>
+              <li class="ration-popup__props-item">
+                <span class="ration-popup__props-label">Жиры</span>
+                <span class="ration-popup__props-value">7 г</span>
+              </li>
+              <li class="ration-popup__props-item">
+                <span class="ration-popup__props-label">Углеводы</span>
+                <span class="ration-popup__props-value">7 г</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Connecting Libs Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- Connecting Page Scripts -->
-    <script src="./scripts/index.min.js"></script>
+    <script src="./scripts/script-tab.js"></script>
+    <script src="./scripts/new.js"></script>
   </body>
 </html>

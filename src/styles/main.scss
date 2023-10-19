@@ -322,7 +322,7 @@
 
   .general__form {
     background-color: white;
-    background-image: url(../images/ration-form-bg.png);
+    background-image: url(../images/ration-form__bg.png);
 
     @include responsive(max, $container-width) {
       -webkit-background-size: 30%;

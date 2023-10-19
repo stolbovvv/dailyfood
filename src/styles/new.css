@@ -1,9 +1,43 @@
+.ration__info {
+  gap: 30px;
+}
+.ration__slider {
+  min-width: 0;
+  padding: 40px 0;
+}
+@media screen and (max-width: 879px) {
+  .ration__slider {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .ration__slider {
+    width: 100%;
+    padding: 40px 0 20px 0;
+  }
+}
+@media screen and (min-width: 769px) {
+  .ration__menu-list {
+    display: flex !important;
+    gap: 40px 30px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    background-color: transparent;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 879px) {
+  .ration__cost {
+    margin: 0 auto;
+  }
+}
+
 .ration-card {
   display: flex;
   align-items: center;
   flex-direction: column;
   align-self: stretch;
-  margin: 40px 20px 40px 0;
   width: 260px;
 }
 .ration-card__img {
@@ -97,126 +131,219 @@
   transform: rotate(45deg);
 }
 
-.ration__form {
+.ration-form {
+  position: relative;
   display: flex;
   align-items: center;
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
   margin-top: 60px;
+  z-index: 1;
 }
-.ration__form-img {
+@media screen and (max-width: 610px) {
+  .ration-form {
+    flex-direction: column;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+}
+.ration-form__img {
   align-self: stretch;
   width: 25%;
+}
+.ration-form__img > img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: right;
      object-position: right;
 }
-.ration__form-body {
+@media screen and (max-width: 1024px) {
+  .ration-form__img {
+    width: 25%;
+    margin-right: -100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-form__img {
+    width: 10%;
+    margin-right: -75px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-form__img {
+    width: 100%;
+  }
+}
+.ration-form__body {
   flex: 1 1 auto;
   padding: 30px;
   display: flex;
   align-items: center;
+  gap: 20px;
 }
-.ration__form-cell {
+@media screen and (max-width: 610px) {
+  .ration-form__body {
+    flex-direction: column;
+  }
+}
+.ration-form__cell {
   display: flex;
   flex-direction: column;
 }
-.ration__form-cell:nth-child(2) {
+.ration-form__cell:nth-child(2) {
   margin: 0 auto;
   max-width: 300px;
 }
-.ration__form-lable {
+@media screen and (max-width: 768px) {
+  .ration-form__cell:nth-child(2) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-form__cell:nth-child(2) {
+    margin-top: 20px;
+    margin-right: auto;
+  }
+}
+.ration-form__lable {
   font-size: 24px;
   font-weight: 700;
   line-height: 1;
   color: #000;
 }
-.ration__form-title {
+@media screen and (max-width: 1024px) {
+  .ration-form__lable {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-form__lable {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-form__lable {
+    text-align: center;
+  }
+}
+.ration-form__title {
   margin-top: 10px;
   font-size: 40px;
   font-weight: 700;
   line-height: 1;
   color: #000;
 }
-.ration__form-promo {
+@media screen and (max-width: 1024px) {
+  .ration-form__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-form__title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-form__title {
+    text-align: center;
+  }
+}
+.ration-form__promo {
   margin-top: 20px;
   display: flex;
   align-items: center;
+  font-size: 24px;
+  font-weight: 700;
 }
-.ration__form-promo-label {
+@media screen and (max-width: 1024px) {
+  .ration-form__promo {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-form__promo {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-form__promo {
+    margin-inline: auto;
+  }
+}
+.ration-form__promo-label {
+  flex: 0 0 auto;
   padding: 10px 20px 12px 20px;
   border-radius: 999px;
   background: #000;
-  font-size: 24px;
-  font-weight: 700;
   color: #fff;
 }
-.ration__form-promo-value {
+.ration-form__promo-value {
+  flex: 0 0 auto;
   padding: 10px 15px 12px 15px;
   border-radius: 100px;
-  font-size: 24px;
-  font-weight: 700;
   background: #ffd100;
   margin-left: -15px;
 }
-.ration__form-input {
+.ration-form__input {
   padding: 10px;
   font-size: 16px;
+  background: none;
   border-bottom: 1px solid #b8b8b8;
 }
-.ration__form-input::-moz-placeholder {
+.ration-form__input::-moz-placeholder {
   color: #b8b8b8;
 }
-.ration__form-input::placeholder {
+.ration-form__input::placeholder {
   color: #b8b8b8;
 }
-.ration__form-input:focus {
+.ration-form__input:focus {
   border-bottom: 1px solid #52b45b;
 }
-.ration__form-input + .ration__form-input {
+.ration-form__input + .ration-form__input {
   margin-top: 20px;
 }
-.ration__form-policy {
+.ration-form__policy {
   display: flex;
   align-items: center;
   margin-top: 30px;
 }
-.ration__form-label {
+.ration-form__label {
   flex: 1 1 auto;
   font-size: 14px;
   line-height: 1.2;
   color: #b8b8b8;
   margin-left: 10px;
 }
-.ration__form-label > a {
+.ration-form__label > a {
   color: #52b45b;
   display: inline;
   text-decoration: underline;
 }
-.ration__form-button {
+.ration-form__button {
   margin-top: 30px;
 }
 
 .ration-popup {
   position: fixed;
-  inset: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(133, 133, 133, 0.6);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
   z-index: 1000;
+  transition: opacity 0.3s ease 0s;
 }
 .ration-popup:not(.is-active) {
   opacity: 0;
   visibility: hidden;
-}
-.ration-popup__overlay {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(133, 133, 133, 0.6);
-  -webkit-backdrop-filter: blur(7px);
-          backdrop-filter: blur(7px);
 }
 .ration-popup__dialog {
   position: relative;
@@ -224,6 +351,15 @@
   padding: 60px;
   border-radius: 20px;
   background: #fff;
+  transition: all 0.3s ease 0s;
+}
+:not(.is-active) > .ration-popup__dialog {
+  transform: scale(0.875);
+}
+@media screen and (max-width: 576px) {
+  .ration-popup__dialog {
+    padding: 40px 20px 20px 20px;
+  }
 }
 .ration-popup__button-close {
   position: absolute;
@@ -242,10 +378,16 @@
 .ration-popup__button-close > svg {
   width: 20px;
   height: 20px;
+  pointer-events: none;
 }
 .ration-popup__body {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .ration-popup__body {
+    flex-direction: column;
+  }
 }
 .ration-popup__img {
   flex: 0 0 auto;
@@ -255,9 +397,32 @@
   -o-object-position: center;
      object-position: center;
 }
+@media screen and (max-width: 1024px) {
+  .ration-popup__img {
+    width: calc(35% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-popup__img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
 .ration-popup__info {
   flex: 0 0 auto;
   width: calc(50% - 20px);
+}
+@media screen and (max-width: 1024px) {
+  .ration-popup__info {
+    width: calc(65% - 20px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .ration-popup__info {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
 .ration-popup__name {
   font-size: 32px;
@@ -265,14 +430,39 @@
   line-height: 1.1;
   color: #52b45b;
 }
+@media screen and (max-width: 1024px) {
+  .ration-popup__name {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__name {
+    font-size: 16px;
+  }
+}
 .ration-popup__descr {
   margin-top: 10px;
   font-size: 24px;
   color: #000;
   line-height: 1.2;
 }
+@media screen and (max-width: 1024px) {
+  .ration-popup__descr {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__descr {
+    font-size: 14px;
+  }
+}
 .ration-popup__compound {
   margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .ration-popup__compound {
+    margin-top: 20px;
+  }
 }
 .ration-popup__compound-title {
   color: #000;
@@ -280,15 +470,46 @@
   font-weight: 700;
   line-height: 1.1;
 }
+@media screen and (max-width: 1024px) {
+  .ration-popup__compound-title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__compound-title {
+    font-size: 16px;
+  }
+}
 .ration-popup__compound-text {
   margin-top: 10px;
   color: #b8b8b8;
   font-size: 24px;
   line-height: 1.2;
 }
+@media screen and (max-width: 1024px) {
+  .ration-popup__compound-text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__compound-text {
+    font-size: 14px;
+  }
+}
 .ration-popup__props {
   display: flex;
   margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .ration-popup__props {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .ration-popup__props {
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
 }
 .ration-popup__props-item {
   display: flex;
@@ -301,13 +522,74 @@
   border-right: 1px dashed #dedede;
   padding-right: 20px;
 }
+@media screen and (max-width: 425px) {
+  .ration-popup__props-item {
+    width: 50%;
+  }
+  .ration-popup__props-item:not(:first-child) {
+    margin-left: 0;
+  }
+  .ration-popup__props-item:not(:last-child) {
+    border-right: none;
+  }
+  .ration-popup__props-item:nth-child(2n+0) {
+    padding-left: 20px;
+  }
+  .ration-popup__props-item:nth-child(2n+1) {
+    padding-right: 20px;
+    border-right: 1px dashed #dedede;
+    text-align: right;
+  }
+}
 .ration-popup__props-label {
   color: #b8b8b8;
   font-size: 20px;
-  line-height: 1.1;
+  line-height: 1.2;
+}
+@media screen and (max-width: 1024px) {
+  .ration-popup__props-label {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__props-label {
+    font-size: 14px;
+  }
 }
 .ration-popup__props-value {
   color: #000;
   font-size: 20px;
   line-height: 1.2;
+}
+@media screen and (max-width: 1024px) {
+  .ration-popup__props-value {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .ration-popup__props-value {
+    font-size: 14px;
+  }
+}
+
+.splide__pagination {
+  display: flex;
+  margin: 30px auto 0px auto;
+  counter-reset: pagination-num;
+}
+.splide__pagination > li + li {
+  margin-left: 20px;
+}
+.splide__pagination__page {
+  color: rgba(84, 135, 88, 0.29);
+  font-size: 20px;
+  font-weight: 700;
+  background: none;
+}
+.splide__pagination__page.is-active {
+  color: #52b45b;
+}
+.splide__pagination__page:before {
+  counter-increment: pagination-num;
+  content: counter(pagination-num);
 }/*# sourceMappingURL=new.css.map */

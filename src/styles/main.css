@@ -821,7 +821,7 @@ input.form__checkbox.valid {
 }
 .ration .general__form {
   background-color: white;
-  background-image: url(../images/ration-form-bg.png);
+  background-image: url(../images/ration-form__bg.png);
 }
 @media (max-width: 1170px) {
   .ration .general__form {
