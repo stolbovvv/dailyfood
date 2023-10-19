@@ -7,6 +7,7 @@
 }
 @media screen and (max-width: 879px) {
   .ration__slider {
+    width: 50%;
     margin: 0 auto;
   }
 }
@@ -570,6 +571,11 @@
   .ration-popup__props-value {
     font-size: 14px;
   }
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
 }
 
 .splide__pagination {

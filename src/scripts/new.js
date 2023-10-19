@@ -52,15 +52,21 @@ class Popup {
 
 window.addEventListener('DOMContentLoaded', () => {
   new Popup('#ration-popup');
-  new Splide('.splide', {
-    arrows: false,
+  const splide = new Splide('.splide', {
     destroy: true,
-    width: 260,
-    gap: 20,
+
     breakpoints: {
       768: {
         destroy: false,
+        perMove: 1,
+        perPage: 1,
+        arrows: false,
+        drag: true,
+        gap: 20,
+        dragMinThreshold: 30,
       },
     },
   }).mount();
+
+  splide.on('dragged');
 });

@@ -7,6 +7,7 @@
     padding: 40px 0;
 
     @media screen and (max-width: 879px) {
+      width: 50%;
       margin: 0 auto;
     }
     @media screen and (max-width: 600px) {
@@ -541,6 +542,11 @@
       font-size: 14px;
     }
   }
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
 }
 
 .splide__pagination {
