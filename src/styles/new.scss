@@ -3,6 +3,8 @@
     gap: 30px;
   }
   &__slider {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
     padding: 40px 0;
 
@@ -17,14 +19,18 @@
   }
   &__menu-list {
     @media screen and (min-width: 769px) {
-      display: flex !important;
       gap: 40px 30px;
-
       justify-content: flex-start;
       align-content: flex-start;
       background-color: transparent;
       flex-wrap: wrap;
       flex-grow: 1;
+    }
+  }
+  &__menu-slide {
+    @media screen and (min-width: 769px) {
+      width: auto;
+      height: auto;
     }
   }
   &__cost {
@@ -252,6 +258,7 @@
     align-items: center;
     font-size: 24px;
     font-weight: 700;
+    line-height: normal;
 
     @media screen and (max-width: 1024px) {
       font-size: 20px;
@@ -278,6 +285,12 @@
     border-radius: 100px;
     background: #ffd100;
     margin-left: -15px;
+    color: #000;
+
+    & > span {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 0.9375em;
+    }
   }
   &__input {
     padding: 10px;
@@ -544,27 +557,41 @@
   }
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .splide__slide {
   display: flex;
   justify-content: center;
 }
 
-.splide__pagination {
+.swiper-pagination {
+  position: relative !important;
   display: flex;
-  margin: 30px auto 0px auto;
+  padding: 30px 0 0px 0;
+  justify-content: center;
   counter-reset: pagination-num;
 
-  & > li + li {
-    margin-left: 20px;
+  @media screen and (min-width: 769px) {
+    display: none;
   }
 
-  &__page {
+  & > span + span {
+    margin-left: 20px !important;
+  }
+
+  & > .swiper-pagination-bullet {
     color: rgba(84, 135, 88, 0.29);
     font-size: 20px;
     font-weight: 700;
     background: none;
+    width: auto !important;
+    height: auto !important;
+    opacity: 1;
 
-    &.is-active {
+    &-active {
       color: #52b45b;
     }
 
@@ -573,4 +600,9 @@
       content: counter(pagination-num);
     }
   }
+}
+
+span.woocommerce-Price-currencySymbol {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.875em;
 }
