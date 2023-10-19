@@ -2,6 +2,8 @@
   gap: 30px;
 }
 .ration__slider {
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   padding: 40px 0;
 }
@@ -160,6 +162,7 @@
   align-items: center;
   font-size: 24px;
   font-weight: 700;
+  line-height: normal;
 }
 .ration-form__promo-label {
   flex: 0 0 auto;
@@ -174,6 +177,11 @@
   border-radius: 100px;
   background: #ffd100;
   margin-left: -15px;
+  color: #000;
+}
+.ration-form__promo-value > span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9375em;
 }
 .ration-form__input {
   padding: 10px;
@@ -333,35 +341,52 @@
   line-height: 1.2;
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .splide__slide {
   display: flex;
   justify-content: center;
 }
 
-.splide__pagination {
+.swiper-pagination {
+  position: relative !important;
+}
+
+.swiper-pagination {
   display: flex;
-  margin: 30px auto 0px auto;
+  padding: 30px 0 0px 0;
+  justify-content: center;
   counter-reset: pagination-num;
 }
-.splide__pagination > li + li {
-  margin-left: 20px;
+.swiper-pagination > span + span {
+  margin-left: 20px !important;
 }
-.splide__pagination__page {
+.swiper-pagination > .swiper-pagination-bullet {
+  width: auto !important;
+  height: auto !important;
+}
+.swiper-pagination > .swiper-pagination-bullet {
   color: rgba(84, 135, 88, 0.29);
   font-size: 20px;
   font-weight: 700;
   background: none;
+  opacity: 1;
 }
-.splide__pagination__page.is-active {
+.swiper-pagination > .swiper-pagination-bullet-active {
   color: #52b45b;
 }
-.splide__pagination__page:before {
+.swiper-pagination > .swiper-pagination-bullet:before {
   counter-increment: pagination-num;
   content: counter(pagination-num);
+}
+
+span.woocommerce-Price-currencySymbol {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.875em;
 }@media screen and (min-width: 769px) {
-  .ration__menu-list {
-    display: flex !important;
-  }
   .ration__menu-list {
     gap: 40px 30px;
     justify-content: flex-start;
@@ -369,6 +394,13 @@
     background-color: transparent;
     flex-wrap: wrap;
     flex-grow: 1;
+  }
+  .ration__menu-slide {
+    width: auto;
+    height: auto;
+  }
+  .swiper-pagination {
+    display: none;
   }
 }@media screen and (max-width: 1024px) {
   .ration-form__img {
