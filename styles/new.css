@@ -333,6 +333,11 @@
   line-height: 1.2;
 }
 
+.splide__slide {
+  display: flex;
+  justify-content: center;
+}
+
 .splide__pagination {
   display: flex;
   margin: 30px auto 0px auto;
@@ -405,6 +410,7 @@
   }
 }@media screen and (max-width: 879px) {
   .ration__slider {
+    width: 50%;
     margin: 0 auto;
   }
   .ration__cost {
