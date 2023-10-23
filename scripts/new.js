@@ -1,24 +1,29 @@
 "use strict";
 
-/* global Splide Swiper */
+/* global Swiper */
 
 class Popup {
   constructor(element) {
     let {
       activeClass = 'is-active',
-      needLock = true
+      needLock = true,
+      onShow = () => {},
+      onHide = () => {}
     } = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     this.popupRoot = typeof element === 'string' ? document.querySelector(element) : element;
     if (this.popupRoot) {
       this.popupTrigger = document.querySelectorAll(`.js-popup-trigger`);
       this.options = {
         needLock,
-        activeClass
+        activeClass,
+        onShow,
+        onHide
       };
       this.init();
     }
   }
-  show() {
+  show(trigger) {
+    this.options.onShow(this.popupRoot, trigger);
     this.popupRoot.classList.add(this.options.activeClass);
     if (this.options.needLock) {
       document.body.style['overflow'] = 'hidden';
@@ -26,7 +31,8 @@ class Popup {
       document.documentElement.style['scrollbar-gutter'] = 'stable';
     }
   }
-  hide() {
+  hide(trigger) {
+    this.options.onHide(this.popupRoot, trigger);
     this.popupRoot.classList.remove(this.options.activeClass);
     if (this.options.needLock) {
       document.body.style.removeProperty('overflow');
@@ -36,38 +42,50 @@ class Popup {
   }
   init() {
     this.popupRoot.addEventListener('click', e => {
-      if (e.target && e.target === this.popupRoot) this.hide();
+      if (e.target && e.target === this.popupRoot) this.hide(e.target);
     });
     this.popupTrigger.forEach(trigger => {
       trigger.addEventListener('click', () => {
-        if (trigger.dataset.showPopup === this.popupRoot.id) this.show();
-        if (trigger.dataset.hidePopup === this.popupRoot.id) this.hide();
+        if (trigger.dataset.showPopup === this.popupRoot.id) this.show(trigger);
+        if (trigger.dataset.hidePopup === this.popupRoot.id) this.hide(trigger);
       });
     });
   }
 }
-
-// const splide = new Splide('.splide', {
-//   destroy: true,
-
-//   breakpoints: {
-//     768: {
-//       destroy: false,
-//       perMove: 1,
-//       perPage: 1,
-//       arrows: false,
-//       drag: true,
-//       gap: 20,
-//       dragMinThreshold: 30,
-//     },
-//   },
-// }).mount();
-
 window.addEventListener('DOMContentLoaded', () => {
   const breakpoints = {
     tablet: window.matchMedia('(max-width: 768px)')
   };
-  new Popup('#ration-popup');
+  new Popup('#ration-popup', {
+    onShow: (popup, trigger) => {
+      const popupImg = popup.querySelector('.ration-popup__img');
+      const popupName = popup.querySelector('.ration-popup__name');
+      const popupDescr = popup.querySelector('.ration-popup__descr');
+      const popupCompound = popup.querySelector('.ration-popup__compound-text');
+      const popupKcal = popup.querySelector('[data-ration-props="kcal"]');
+      const popupFats = popup.querySelector('[data-ration-props="fats"]');
+      const popupSquirrels = popup.querySelector('[data-ration-props="squirrels"]');
+      const popupCarbohydrates = popup.querySelector('[data-ration-props="carbohydrates"]');
+      const card = trigger.closest('.ration-card');
+      const cardImg = card.querySelector('.ration-card__img');
+      const cardName = card.querySelector('.ration-card__name');
+      const cardDescr = card.querySelector('.ration-card__descr');
+      const cardKcal = card.querySelector('[data-ration-props="kcal"]');
+      const cardFats = card.querySelector('[data-ration-props="fats"]');
+      const cardCompound = card.querySelector('.ration-card__compound-text');
+      const cardSquirrels = card.querySelector('[data-ration-props="squirrels"]');
+      const cardCarbohydrates = card.querySelector('[data-ration-props="carbohydrates"]');
+      popupImg.src = cardImg.src;
+      popupImg.alt = cardImg.alt;
+      popupName.textContent = cardName.textContent;
+      popupDescr.textContent = cardDescr.textContent;
+      popupKcal.textContent = cardKcal.textContent;
+      popupFats.textContent = cardFats.textContent;
+      popupCompound.textContent = cardCompound.textContent;
+      popupSquirrels.textContent = cardSquirrels.textContent;
+      popupCarbohydrates.textContent = cardCarbohydrates.textContent;
+    }
+  });
   const slider = new Swiper('#ration-slider-swiper', {
     pagination: {
       el: '.swiper-pagination',

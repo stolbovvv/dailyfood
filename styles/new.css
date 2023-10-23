@@ -52,6 +52,9 @@
   margin-top: 10px;
   margin-bottom: auto;
 }
+.ration-card__compound-text {
+  display: none;
+}
 .ration-card__props {
   display: flex;
   justify-content: space-between;
@@ -244,7 +247,7 @@
 }
 .ration-popup__dialog {
   position: relative;
-  max-width: 1002px;
+  width: min(1000px, 100%);
   padding: 60px;
   border-radius: 20px;
   background: #fff;
@@ -285,6 +288,8 @@
      object-position: center;
 }
 .ration-popup__info {
+  display: flex;
+  flex-direction: column;
   flex: 0 0 auto;
   width: calc(50% - 20px);
 }
@@ -317,7 +322,8 @@
 }
 .ration-popup__props {
   display: flex;
-  margin-top: 40px;
+  margin-top: auto;
+  padding-top: 40px;
 }
 .ration-popup__props-item {
   display: flex;
@@ -481,7 +487,7 @@ span.woocommerce-Price-currencySymbol {
     margin-top: 20px;
   }
   .ration-popup__props {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 }@media screen and (max-width: 610px) {
   .ration-form {
