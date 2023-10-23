@@ -82,6 +82,9 @@
     margin-top: 10px;
     margin-bottom: auto;
   }
+  &__compound-text {
+    display: none;
+  }
   &__props {
     display: flex;
     justify-content: space-between;
@@ -355,7 +358,7 @@
   }
   &__dialog {
     position: relative;
-    max-width: 1002px;
+    width: min(1000px, 100%);
     padding: 60px;
     border-radius: 20px;
     background: #fff;
@@ -413,6 +416,8 @@
     }
   }
   &__info {
+    display: flex;
+    flex-direction: column;
     flex: 0 0 auto;
     width: calc(50% - 20px);
 
@@ -490,9 +495,10 @@
   }
   &__props {
     display: flex;
-    margin-top: 40px;
+    margin-top: auto;
+    padding-top: 40px;
     @media screen and (max-width: 768px) {
-      margin-top: 20px;
+      padding-top: 20px;
     }
     @media screen and (max-width: 425px) {
       flex-wrap: wrap;
