@@ -95,25 +95,27 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
-  const slider = new Swiper('#ration-slider-swiper', {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-  });
+  document.querySelectorAll('.swiper.ration__slider').forEach((item) => {
+    const slider = new Swiper(item, {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+    });
 
-  if (breakpoints.tablet.matches) {
-    slider.init();
-  } else {
-    slider.destroy(false, true);
-  }
-
-  breakpoints.tablet.addEventListener('change', (e) => {
-    if (e.matches) {
+    if (breakpoints.tablet.matches) {
       slider.init();
     } else {
       slider.destroy(false, true);
     }
+
+    breakpoints.tablet.addEventListener('change', (e) => {
+      if (e.matches) {
+        slider.init();
+      } else {
+        slider.destroy(false, true);
+      }
+    });
   });
 });
